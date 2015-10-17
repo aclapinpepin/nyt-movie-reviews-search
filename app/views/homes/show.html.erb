@@ -4,3 +4,7 @@
   <%= form.text_field :movie_query %>
   <%= form.submit "Search" %>
 <% end %>
+
+<div class='results'>
+  <%= render partial: 'searches/review', locals: { reviews: @reviews } %>
+</div>
