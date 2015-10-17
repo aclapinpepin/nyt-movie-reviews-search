@@ -3,10 +3,10 @@
     <th><%= "Title" %></th>
     <th><%= "Rating" %></th>
     <th><%= "Opening Date" %></th>
-    <th><%= "Capsule Review" %></th>
+    <th><%= "Summary" %></th>
     <th><%= "Review Link" %></th>
   </tr>
-  <% if @reviews %>
+  <%# <% if @reviews %1> %>
     <% @reviews['results'].each do |movie| %>
       <tr>
         <td><%= movie['display_title'] %></td>
@@ -16,5 +16,5 @@
         <td><%= link_to movie['link']['suggested_link_text'], movie['link']['url'] %></td>
       </tr>
     <% end %>
-  <% end %>
+  <%# <% end %1> %>
 </table>
