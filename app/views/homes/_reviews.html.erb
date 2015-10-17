@@ -1,0 +1,20 @@
+<table class='neat-table'>
+  <tr>
+    <th><%= "Title" %></th>
+    <th><%= "Rating" %></th>
+    <th><%= "Opening Date" %></th>
+    <th><%= "Capsule Review" %></th>
+    <th><%= "Review Link" %></th>
+  </tr>
+  <% if @reviews %>
+    <% @reviews['results'].each do |movie| %>
+      <tr>
+        <td><%= movie['display_title'] %></td>
+        <td><%= movie['mpaa_rating'] %></td>
+        <td><%= movie['opening_date'] %></td>
+        <td><%= movie['capsule_review'] %></td>
+        <td><%= link_to movie['link']['suggested_link_text'], movie['link']['url'] %></td>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
