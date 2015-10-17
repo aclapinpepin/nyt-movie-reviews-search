@@ -13,6 +13,7 @@ gem 'httparty'
 gem 'figaro'
 gem 'pry'
 gem 'will_paginate', '~> 3.0.6'
+gem 'nprogress-rails'
 
 group :development, :test do
   gem 'byebug'

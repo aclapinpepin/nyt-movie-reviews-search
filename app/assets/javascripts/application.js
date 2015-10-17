@@ -15,3 +15,6 @@
 //= require turbolinks
 //= require_tree .
 //= require homes
+//= require nprogress
+//= require nprogress-turbolinks
+//= require nprogress-ajax
