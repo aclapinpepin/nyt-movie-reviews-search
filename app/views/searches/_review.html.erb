@@ -1,11 +1,9 @@
-<% if @reviews %>
 <% @reviews['results'].each do |movie| %>
-<ul class='reviews-results'>
-  <li><%= movie['display_title'] %></li>
-  <li><%= movie['capsule_review'] %></li>
-  <li><%= movie['mpaa_rating'] %></li>
-  <li><%= movie['opening_date'] %></li>
-  <li><%= link_to movie['link']['suggested_link_text'], movie['link']['url'] %></li>
-</ul>
-<% end %>
+  <ul class='reviews-results'>
+    <li><%= movie['display_title'] %></li>
+    <li><%= movie['capsule_review'] %></li>
+    <li><%= movie['mpaa_rating'] %></li>
+    <li><%= movie['opening_date'] %></li>
+    <li><%= link_to movie['link']['suggested_link_text'], movie['link']['url'] %></li>
+  </ul>
 <% end %>

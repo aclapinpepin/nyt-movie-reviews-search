@@ -1,3 +1,4 @@
+<% unless params[:search].nil? %>
 <table class='neat-table'>
   <tr>
     <th><%= "Title" %></th>
@@ -6,15 +7,14 @@
     <th><%= "Summary" %></th>
     <th><%= "Review Link" %></th>
   </tr>
-  <%# <% if @reviews %1> %>
-    <% @reviews['results'].each do |movie| %>
-      <tr>
-        <td><%= movie['display_title'] %></td>
-        <td><%= movie['mpaa_rating'] %></td>
-        <td><%= movie['opening_date'] %></td>
-        <td><%= movie['capsule_review'] %></td>
-        <td><%= link_to movie['link']['suggested_link_text'], movie['link']['url'] %></td>
-      </tr>
-    <% end %>
-  <%# <% end %1> %>
+  <% @reviews['results'].each do |movie| %>
+    <tr>
+      <td><%= movie['display_title'] %></td>
+      <td><%= movie['mpaa_rating'] %></td>
+      <td><%= movie['opening_date'] %></td>
+      <td><%= movie['capsule_review'] %></td>
+      <td><%= link_to movie['link']['suggested_link_text'], movie['link']['url'] %></td>
+    </tr>
+  <% end %>
 </table>
+<% end %>
