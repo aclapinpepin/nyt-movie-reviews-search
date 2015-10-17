@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'httparty'
 gem 'figaro'
 gem 'pry'
+gem 'will_paginate', '~> 3.0.6'
 
 group :development, :test do
   gem 'byebug'

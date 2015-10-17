@@ -6,6 +6,6 @@ class SearchesController < ApplicationController
   end
 
   def search_options
-    {query: {'query' => params[:search][:movie_query], 'thousand-best' => 'N'} }
+    {query: {'query' => params[:search], 'thousand-best' => 'N'} }
   end
 end
