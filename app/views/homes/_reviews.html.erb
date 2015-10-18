@@ -1,4 +1,6 @@
-<% unless params[:search].nil? %>
+<% if params[:search].nil? %>
+<div><%= @reviews['num_results'] %> movie reviews available.</div>
+<% else %>
 <table class='neat-table'>
   <tr>
     <th><%= "Title" %></th>

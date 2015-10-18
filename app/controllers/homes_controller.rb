@@ -13,6 +13,6 @@ class HomesController < ApplicationController
   private
 
   def search_options
-    {query: {'query' => params[:search], 'thousand-best' => 'N'} }
+    {query: {'query' => params[:search]}}
   end
 end
