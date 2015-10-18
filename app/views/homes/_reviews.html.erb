@@ -1,20 +1,20 @@
 <% if params[:search].nil? %>
-<div><%= @reviews['num_results'] %> movie reviews available.</div>
+<h5><%= @reviews['num_results'] %> movie reviews available.</h5>
 <% else %>
-<table class='neat-table'>
+<table class="table table-striped table-condensed">
   <tr>
-    <th><%= "Title" %></th>
-    <th><%= "Rating" %></th>
-    <th><%= "Opening Date" %></th>
-    <th><%= "Summary" %></th>
-    <th><%= "Review Link" %></th>
+    <th class="col-md-2"><%= "Title" %></th>
+    <th class="col-md-1"><%= "Rating" %></th>
+    <th class="col-md-2"><%= "Release Date" %></th>
+    <th class="col-md-4"><%= "Description" %></th>
+    <th class="col-md-3"><%= "Review Link" %></th>
   </tr>
   <% @reviews['results'].each do |movie| %>
     <tr>
       <td><%= movie['display_title'] %></td>
       <td><%= movie['mpaa_rating'] %></td>
       <td><%= movie['opening_date'] %></td>
-      <td><%= movie['capsule_review'] %></td>
+      <td><%= movie['capsule_review'] == "" ? movie['summary_short'] : movie['capsule_review'] %></td>
       <td><%= link_to movie['link']['suggested_link_text'], movie['link']['url'] %></td>
     </tr>
   <% end %>
