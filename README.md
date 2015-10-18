@@ -3,4 +3,4 @@
 Fetches movie reviews results from [NYT's public
 API](http://developer.nytimes.com/docs/read/movie_reviews_api#).
 
-[http://nytmoviereviews.herokuapp.com/]
+[The live App](http://nytmoviereviews.herokuapp.com/)
